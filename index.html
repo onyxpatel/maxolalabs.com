@@ -208,52 +208,23 @@
       height: 24px;
     }
 
-    /* Coming Soon Form */
-    .notify-form {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      max-width: 500px;
-    }
-
-    .email-input {
-      flex: 1;
-      padding: 1rem 1.5rem;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      color: white;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .email-input::placeholder {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .email-input:focus {
-      outline: none;
-      border-color: #D4AF37;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .notify-btn {
-      padding: 1rem 2rem;
+    /* Contact Button */
+    .contact-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
       background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-      border: none;
       border-radius: 12px;
       color: #0B1426;
       font-weight: 700;
       font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.025em;
+      transition: all 0.3s ease;
+      margin-bottom: 2rem;
     }
 
-    .notify-btn:hover {
+    .contact-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
     }
@@ -456,20 +427,10 @@
         text-align: center;
       }
 
-      .notify-form {
+      .hero-text {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 350px;
-        margin: 0 auto 2rem;
-      }
-
-      .email-input {
-        width: 100%;
-        margin-bottom: 1rem;
-      }
-
-      .notify-btn {
-        width: 100%;
       }
 
       .features-grid {
@@ -518,10 +479,9 @@
             The ultimate platform to track legendary investors like Warren Buffett and Cathie Wood with professional-grade SEC 13F analysis. Be the first to know when we launch.
           </p>
           
-          <form class="notify-form" onsubmit="handleEmailSignup(event)">
-            <input type="email" placeholder="Enter your email for early access" class="email-input" required />
-            <button type="submit" class="notify-btn">Get Notified</button>
-          </form>
+          <a href="mailto:contact@maxolalabs.com?subject=WatchTower%20Early%20Access%20Interest" class="contact-btn">
+            Get in Touch
+          </a>
           
           <p class="launch-info">
             🚀 Launching Q1 2026 • iOS First • Professional Intelligence Tools
@@ -587,29 +547,17 @@
 <footer class="footer" id="contact">
   <div class="footer-content">
     <div class="footer-text">
-      <strong>Maxola Labs LLC</strong> is preparing to launch the most advanced hedge fund intelligence platform. Get notified when WatchTower goes live.
+      <strong>Maxola Labs LLC</strong> is building the most advanced hedge fund intelligence platform. Reach out for early access or inquiries.
     </div>
     <div>
       Email: <a href="mailto:contact@maxolalabs.com" class="footer-email">contact@maxolalabs.com</a>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Maxola Labs LLC. Launching Q1 2026 • iOS First • Professional Financial Intelligence
+      &copy; 2025 Maxola Labs LLC. Launching Q1 2026 • iOS First • Professional Financial Intelligence
       <br>
       <a href="/privacy.html" style="color: rgba(255, 255, 255, 0.5); text-decoration: none; margin-top: 0.5rem; display: inline-block;">Privacy Policy</a>
     </div>
   </div>
 </footer>
 </body>
-
-<script>
-function handleEmailSignup(event) {
-  event.preventDefault();
-  const email = event.target.querySelector('.email-input').value;
-  
-  // Here you would typically send the email to your backend
-  // For now, just show a success message
-  const button = event.target.querySelector('.notify-btn');
-  const originalText = button.textContent;
-  
-  button.textContent = 'Thank You! 🚀';
-  button.style.background = 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)'
+</html>
