@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Privacy Policy — WatchTower · Maxola Labs</title>
+  <meta name="description" content="WatchTower does not collect, store, or transmit any personal data. Your privacy is absolute."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#060810;--surface:#0c1018;
+      --border:rgba(255,255,255,0.06);--border-bright:rgba(255,255,255,0.12);
+      --text:#eef0f8;--text-muted:rgba(238,240,248,0.55);--text-dim:rgba(238,240,248,0.25);
+      --gold:#D4AF37;--gold-light:#f0cc5a;--gold-dark:#a07520;
+      --gold-dim:rgba(212,175,55,0.1);--gold-glow:rgba(212,175,55,0.15);
+      --ease:cubic-bezier(0.23,1,0.32,1);
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4}
+    h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.1}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(6,8,16,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+    .nav-left{display:flex;align-items:center;gap:20px}
+    .nav-back{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color 0.2s;padding:6px 12px;border-radius:100px;border:1px solid var(--border);background:rgba(255,255,255,0.02)}
+    .nav-back:hover{color:var(--text-muted);border-color:var(--border-bright)}
+    .nav-brand{display:flex;flex-direction:column;text-decoration:none}
+    .nav-brand .wm{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.14em;color:var(--gold-light)}
+    .nav-brand .ws{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-dim);margin-top:1px}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:10px 22px;border-radius:100px;text-decoration:none;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#080600;box-shadow:0 4px 20px var(--gold-glow);transition:all 0.3s var(--ease)}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(212,175,55,0.4)}
+
+    /* MAIN */
+    main{max-width:760px;margin:0 auto;padding:120px 48px 100px}
+
+    /* HERO BLOCK */
+    .pp-hero{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+    .pp-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 8px;background:var(--gold-dim);border:1px solid rgba(212,175,55,0.2);border-radius:100px;margin-bottom:24px}
+    .pp-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px var(--gold)}
+    .pp-eyebrow span{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-light)}
+    .pp-hero h1{font-size:clamp(2.4rem,4vw,3.4rem);color:var(--text);margin-bottom:14px}
+    .pp-hero .updated{font-size:12px;letter-spacing:0.08em;color:var(--text-dim);text-transform:uppercase;margin-bottom:28px}
+
+    /* SUMMARY BOX */
+    .summary-box{background:var(--gold-dim);border:1px solid rgba(212,175,55,0.2);border-radius:16px;padding:28px 32px;margin-bottom:0}
+    .summary-box p{font-size:1rem;color:var(--text);line-height:1.8}
+    .summary-box strong{color:var(--gold-light)}
+
+    /* SECTIONS */
+    .pp-section{margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+    .pp-section:last-of-type{border-bottom:none}
+    .pp-section h2{font-size:0.95rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+    .pp-section h2::before{content:'';width:20px;height:1px;background:var(--gold);flex-shrink:0}
+    .pp-section p{font-size:15px;color:var(--text-muted);line-height:1.85;margin-bottom:16px}
+    .pp-section p:last-child{margin-bottom:0}
+    .pp-section ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+    .pp-section ul li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text-muted);line-height:1.75}
+    .pp-section ul li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px;box-shadow:0 0 4px rgba(212,175,55,0.4)}
+    .pp-section a{color:var(--gold-light);text-decoration:none;border-bottom:1px solid rgba(212,175,55,0.2);transition:border-color 0.2s}
+    .pp-section a:hover{border-color:var(--gold)}
+
+    /* HIGHLIGHT */
+    .hl-box{background:rgba(255,255,255,0.025);border:1px solid var(--border-bright);border-radius:14px;padding:24px 28px;margin:24px 0}
+    .hl-box p{font-size:14px;color:var(--text-muted);line-height:1.8;margin:0}
+    .hl-box strong{color:var(--text)}
+
+    /* CONTACT BOX */
+    .contact-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin-top:48px}
+    .contact-box h2{font-size:1.3rem;color:var(--text);margin-bottom:16px}
+    .contact-box p{font-size:15px;color:var(--text-muted);line-height:1.8;margin-bottom:12px}
+    .contact-box a{color:var(--gold-light);text-decoration:none}
+    .contact-box a:hover{text-decoration:underline}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:40px 0}
+    .ft-inner{max-width:760px;margin:0 auto;padding:0 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .ft-inner p,.ft-inner a{font-size:12px;color:var(--text-dim);text-decoration:none}
+    .ft-inner a:hover{color:var(--text-muted)}
+
+    @media(max-width:640px){main{padding:100px 20px 60px}nav{padding:0 20px}.ft-inner{padding:0 20px;flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="../" class="nav-back">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Maxola Labs
+    </a>
+    <a href="./" class="nav-brand"><span class="wm">WATCHTOWER</span><span class="ws">by Maxola Labs</span></a>
+  </div>
+  <a href="https://apps.apple.com/app/id6756628455" class="nav-cta" target="_blank">Download App</a>
+</nav>
+
+<main>
+
+  <div class="pp-hero">
+    <div class="pp-eyebrow">
+      <div class="pp-eyebrow-dot"></div>
+      <span>WatchTower · Maxola Labs LLC</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last Updated: March 8, 2026</p>
+    <div class="summary-box">
+      <p>MAXOLA LABS LLC built WatchTower as a commercial iOS application. This policy explains our approach to your data. The short version: <strong>we do not collect, store, or transmit any personal information about you — ever.</strong></p>
+    </div>
+  </div>
+
+  <div class="pp-section">
+    <h2>Information We Do Not Collect</h2>
+    <p>WatchTower is built from the ground up with your privacy as a default — not an afterthought. We do not collect, store, or transmit:</p>
+    <ul>
+      <li>Personal identification information of any kind (name, email address, phone number)</li>
+      <li>Location data or GPS coordinates</li>
+      <li>Device identifiers, advertising IDs, or fingerprints</li>
+      <li>Usage analytics, behavioral tracking, or crash reports sent to us</li>
+      <li>Financial information, portfolio data, or investment preferences</li>
+      <li>Any data whatsoever that requires an account or login to produce</li>
+    </ul>
+    <p>There is no analytics SDK, no third-party tracking library, and no telemetry framework in WatchTower.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>Local Data Storage</h2>
+    <p>WatchTower stores a small set of your preferences locally on your device using Apple's standard UserDefaults system. This may include:</p>
+    <ul>
+      <li>Appearance preference (light, dark, or system)</li>
+      <li>Haptic feedback setting (on/off)</li>
+      <li>Onboarding completion state</li>
+    </ul>
+    <p>This data exists exclusively on your device. It is never transmitted, never accessible to us, and never shared with any third party. Deleting the app permanently removes it.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>Sign In with Apple</h2>
+    <p>WatchTower offers optional Sign In with Apple for users who want to save preferences across devices. If you choose to use this feature:</p>
+    <ul>
+      <li>Apple handles all authentication — we receive only a unique anonymous identifier from Apple</li>
+      <li>We never receive your name, email address, or any Apple ID credentials</li>
+      <li>You may use the "Hide My Email" option to keep your address private from us entirely</li>
+      <li>Sign in is entirely optional — all core features are available without any account</li>
+    </ul>
+    <div class="hl-box">
+      <p><strong>No account required.</strong> Every feature in WatchTower is accessible without creating an account or signing in. Authentication is purely optional convenience.</p>
+    </div>
+  </div>
+
+  <div class="pp-section">
+    <h2>Third-Party Data Services</h2>
+    <p>WatchTower integrates with the following external services to deliver market data and charting. Your device makes direct requests to these services — we do not proxy or log these requests:</p>
+    <ul>
+      <li><strong>Yahoo Finance API</strong> — Fetches real-time market index and price data. See <a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html" target="_blank" rel="noopener">Yahoo's Privacy Policy</a>.</li>
+      <li><strong>TradingView Widget</strong> — Renders interactive charts via an embedded web view. See <a href="https://www.tradingview.com/privacy-policy/" target="_blank" rel="noopener">TradingView's Privacy Policy</a>.</li>
+      <li><strong>SEC EDGAR (via Maxola Labs Cloudflare Worker)</strong> — Public SEC 13F filing data is served through our Cloudflare Worker cache. No personal data is passed in these requests — they are anonymous public data fetches.</li>
+    </ul>
+    <p>We do not control and are not responsible for the privacy practices of these external services. We recommend reviewing their individual policies.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>Data Security</h2>
+    <p>Because we do not collect personal data, there is no personal data for us to secure on our servers. Your local device preferences are protected by your device's built-in security — device passcode, Face ID, or Touch ID — managed entirely by Apple's iOS platform.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>Children's Privacy</h2>
+    <p>WatchTower is a financial information application intended for general audiences. We do not knowingly collect personal information from anyone, including children under 13. As we collect no personal data at all, no special handling is required.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised "Last Updated" date. We encourage you to review this page periodically. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+    <p>Questions or concerns about this Privacy Policy or our data practices? We're happy to talk.</p>
+    <p>
+      <strong>MAXOLA LABS LLC</strong><br/>
+      <a href="mailto:contact@maxolalabs.com">contact@maxolalabs.com</a>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="ft-inner">
+    <p>© 2026 Maxola Labs LLC. All rights reserved.</p>
+    <div style="display:flex;gap:24px">
+      <a href="./">WatchTower</a>
+      <a href="../turbosearch/privacy.html">TurboSearch Privacy</a>
+      <a href="../">Maxola Labs</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
