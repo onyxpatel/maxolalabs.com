@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Maxola Labs — Under Construction</title>
+<meta name="description" content="Maxola Labs is an independent iOS app studio. The studio site is being rebuilt — our apps continue to ship and are fully supported."/>
+<meta name="theme-color" content="#07090F"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Maxola Labs — Under Construction"/>
+<meta property="og:description" content="Independent iOS studio. Site being rebuilt — apps still ship."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://maxolalabs.com"/>
+<link rel="canonical" href="https://maxolalabs.com"/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"/>
+<style>
+/* ==========================================================
+   MAXOLA LABS — UNDER CONSTRUCTION
+   Self-contained. No dependencies. Drop-in replacement for index.html.
+   ========================================================== */
+:root{
+  --bg:    #07090F;
+  --bg2:   #0C0F1B;
+  --b:     rgba(255,255,255,.07);
+  --b2:    rgba(255,255,255,.13);
+  --green: #00E5A0;
+  --gdim:  rgba(0,229,160,.08);
+  --gglow: rgba(0,229,160,.22);
+  --gold:  #C9A227;
+  --w:     #fff;
+  --g1:    rgba(255,255,255,.88);
+  --g2:    rgba(255,255,255,.62);
+  --g3:    rgba(255,255,255,.45);
+  --fd:    'Syne', sans-serif;
+  --fb:    'DM Sans', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:var(--fb);
+  font-size:16px;
+  line-height:1.65;
+  color:var(--g2);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1{font-family:var(--fd);font-weight:800;color:var(--w);line-height:1.04;letter-spacing:-.035em}
+a{color:inherit;text-decoration:none;transition:color .2s,opacity .2s}
+img{max-width:100%;display:block}
+
+/* ── BACKGROUND LAYERS ───────────────────────────────────── */
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.blob{position:absolute;border-radius:50%;filter:blur(60px)}
+.b1{width:720px;height:720px;top:-220px;right:-180px;background:radial-gradient(circle,rgba(0,229,160,.13) 0%,transparent 60%)}
+.b2{width:560px;height:560px;bottom:-200px;left:-180px;background:radial-gradient(circle,rgba(201,162,39,.07) 0%,transparent 58%)}
+.grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,black,transparent);
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,black,transparent);
+}
+/* Skewed accent — borrowed from coming-soon template, refined */
+.skew{
+  position:absolute;
+  top:-20%;
+  right:-15%;
+  width:55%;
+  height:140%;
+  background:linear-gradient(135deg,rgba(0,229,160,.05) 0%,transparent 55%);
+  transform:skewX(-9deg);
+  transform-origin:top right;
+}
+
+/* ── SHELL ───────────────────────────────────────────────── */
+.shell{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  padding:32px 44px;
+  max-width:1140px;
+  margin:0 auto;
+}
+
+/* ── HEADER ──────────────────────────────────────────────── */
+header{flex-shrink:0}
+.brand{display:inline-flex;align-items:center;gap:11px}
+.mk{
+  width:34px;height:34px;
+  background:var(--green);
+  color:#030806;
+  border-radius:8px;
+  font-family:var(--fd);
+  font-weight:800;
+  font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 4px 16px rgba(0,229,160,.22);
+}
+.bn{
+  font-family:var(--fd);
+  font-weight:700;
+  font-size:15px;
+  color:var(--w);
+  letter-spacing:-.01em;
+}
+
+/* ── MAIN ────────────────────────────────────────────────── */
+main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  max-width:680px;
+  padding:64px 0;
+}
+.status{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--gdim);
+  border:1px solid rgba(0,229,160,.18);
+  border-radius:40px;
+  padding:7px 16px 7px 12px;
+  font-family:var(--fd);
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--green);
+  margin-bottom:36px;
+}
+.dot{
+  width:6px;height:6px;
+  background:var(--green);
+  border-radius:50%;
+  flex-shrink:0;
+  box-shadow:0 0 8px var(--green);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.3;transform:scale(.85)}
+}
+h1{
+  font-size:clamp(2.4rem,6.5vw,4.8rem);
+  margin-bottom:26px;
+}
+.accent{color:var(--green)}
+.lead{
+  font-size:1.08rem;
+  color:var(--g1);
+  max-width:520px;
+  margin-bottom:46px;
+  font-weight:300;
+  line-height:1.75;
+}
+.lead strong{color:var(--w);font-weight:500}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--fd);
+  font-weight:600;
+  font-size:13.5px;
+  padding:14px 26px;
+  border-radius:10px;
+  background:var(--green);
+  color:#030806;
+  border:1.5px solid transparent;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .2s;
+  letter-spacing:.01em;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 28px var(--gglow);
+  color:#030806;
+}
+.btn .arrow{transition:transform .2s;display:inline-block}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer{
+  border-top:1px solid var(--b);
+  padding-top:26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+.legal{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex-wrap:wrap;
+}
+.legal .lbl{
+  font-family:var(--fd);
+  font-size:9.5px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--g3);
+  margin-right:6px;
+}
+.legal a{
+  color:var(--g2);
+  font-size:12.5px;
+  font-weight:400;
+}
+.legal a:hover{color:var(--green)}
+.legal .sep{color:var(--g3);opacity:.45;font-size:11px}
+.meta{
+  font-size:11.5px;
+  color:var(--g3);
+  font-weight:300;
+  text-align:right;
+}
+.meta strong{color:var(--g2);font-weight:500}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width:767px){
+  .shell{padding:24px 22px}
+  main{padding:44px 0}
+  .lead{font-size:1rem;margin-bottom:36px}
+  .skew{display:none}
+  footer{flex-direction:column;align-items:flex-start;gap:14px}
+  .meta{text-align:left}
+  .b1,.b2{filter:blur(45px)}
+}
+@media (max-height:620px) and (orientation:landscape){
+  main{padding:24px 0}
+  .status{margin-bottom:20px}
+  h1{margin-bottom:14px}
+  .lead{margin-bottom:24px}
+}
+
+/* ── ACCESSIBILITY: respect reduced motion ───────────────── */
+@media (prefers-reduced-motion: reduce){
+  .dot{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg" aria-hidden="true">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="grid"></div>
+  <div class="skew"></div>
+</div>
+
+<div class="shell">
+  <header>
+    <a class="brand" href="/" aria-label="Maxola Labs">
+      <span class="mk">ML</span>
+      <span class="bn">Maxola Labs</span>
+    </a>
+  </header>
+
+  <main>
+    <div class="status">
+      <span class="dot" aria-hidden="true"></span>
+      Site Under Construction
+    </div>
+    <h1>Building something <span class="accent">better.</span></h1>
+    <p class="lead">
+      The studio site is being rebuilt.
+      <strong>Our apps continue to ship and are fully supported</strong> —
+      reach out any time.
+    </p>
+    <a href="mailto:contact@maxolalabs.com" class="btn">
+      contact@maxolalabs.com
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="legal">
+      <span class="lbl">Privacy</span>
+      <a href="https://maxolalabs.com/pry/privacy.html">Pry</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="https://maxolalabs.com/shorecast/privacy.html">ShoreCast</a>
+    </div>
+    <div class="meta">
+      &copy; 2026 <strong>Maxola Labs LLC</strong> &middot; Tampa, FL
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
