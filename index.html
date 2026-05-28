@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Maxola Labs — Under Construction</title>
+<meta name="description" content="Maxola Labs is an independent iOS app studio. The studio site is being rebuilt — our apps continue to ship and are fully supported."/>
+<meta name="theme-color" content="#FAFAF7"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Maxola Labs — Under Construction"/>
+<meta property="og:description" content="Independent iOS studio. Site being rebuilt — apps still ship."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://maxolalabs.com"/>
+<meta property="og:image" content="https://maxolalabs.com/assets/images/hero.jpg"/>
+<link rel="canonical" href="https://maxolalabs.com"/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link rel="preload" as="image" href="assets/images/hero.jpg" media="(min-width: 768px)"/>
+<link rel="preload" as="image" href="assets/images/hero-mobile.jpg" media="(max-width: 767px)"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap"/>
+<style>
+/* ==========================================================
+   MAXOLA LABS — UNDER CONSTRUCTION (Surfline-inspired theme)
+   ========================================================== */
+:root{
+  --bg:        #FAFAF7;            /* warm off-white */
+  --surface:   #FFFFFF;            /* pure white cards */
+  --ink:       #0A0A0A;            /* primary text */
+  --ink-2:     #2A2A2A;
+  --g1:        #555;               /* body */
+  --g2:        #888;               /* muted */
+  --g3:        #B5B5B5;            /* very muted */
+  --b:         rgba(10,10,10,.08);
+  --b2:        rgba(10,10,10,.14);
+  --accent:    #1FA395;            /* turquoise pulled from the water */
+  --accent-dim:rgba(31,163,149,.10);
+  --f:'DM Sans',-apple-system,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:var(--f);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink-2);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{font-family:var(--f);color:var(--ink);letter-spacing:-.03em;line-height:1.05;font-weight:800}
+a{color:inherit;text-decoration:none;transition:color .2s,opacity .2s}
+img{max-width:100%;display:block}
+
+/* ── SHELL ───────────────────────────────────────────────── */
+.shell{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  padding:20px;
+  max-width:1280px;
+  margin:0 auto;
+  gap:20px;
+}
+
+/* ── HEADER ──────────────────────────────────────────────── */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 14px;
+}
+.brand{display:inline-flex;align-items:center;gap:12px}
+.mk{
+  width:36px;height:36px;
+  background:var(--ink);
+  color:#fff;
+  border-radius:9px;
+  font-weight:800;
+  font-size:13px;
+  display:flex;align-items:center;justify-content:center;
+  letter-spacing:-.02em;
+}
+.bn{
+  font-weight:700;
+  font-size:16px;
+  color:var(--ink);
+  letter-spacing:-.015em;
+}
+.h-meta{
+  font-size:12px;
+  color:var(--g1);
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero{
+  position:relative;
+  flex:1;
+  min-height:540px;
+  border-radius:28px;
+  overflow:hidden;
+  background:#5BC7BC url('assets/images/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+  padding:52px;
+  box-shadow:0 1px 2px rgba(10,10,10,.04);
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,.16) 70%,
+    rgba(0,0,0,.45) 100%);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  max-width:680px;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid rgba(255,255,255,.28);
+  padding:8px 16px 8px 13px;
+  border-radius:40px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:#fff;
+  margin-bottom:26px;
+}
+.edot{
+  width:6px;height:6px;
+  background:#fff;
+  border-radius:50%;
+  animation:pulse 2.4s ease-in-out infinite;
+  box-shadow:0 0 8px rgba(255,255,255,.5);
+}
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.4;transform:scale(.8)}
+}
+.hero h1{
+  color:#fff;
+  font-size:clamp(2.6rem,7vw,5.4rem);
+  font-weight:800;
+  letter-spacing:-.04em;
+  text-shadow:0 2px 32px rgba(0,0,0,.15);
+}
+
+/* ── MESSAGE PANEL ───────────────────────────────────────── */
+.msg{
+  background:var(--surface);
+  border-radius:24px;
+  padding:44px 48px;
+  border:1px solid var(--b);
+  box-shadow:0 1px 2px rgba(10,10,10,.03);
+}
+.msg-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:36px;
+  flex-wrap:wrap;
+}
+.msg-text{flex:1;min-width:280px}
+.msg h2{
+  font-size:clamp(1.5rem,2.4vw,2rem);
+  margin-bottom:12px;
+  color:var(--ink);
+  letter-spacing:-.025em;
+}
+.msg p{
+  font-size:1rem;
+  color:var(--g1);
+  max-width:560px;
+  line-height:1.7;
+  font-weight:400;
+}
+.msg p strong{color:var(--ink);font-weight:600}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--ink);
+  color:#fff;
+  font-family:var(--f);
+  font-size:14px;
+  font-weight:600;
+  padding:15px 28px;
+  border-radius:100px;
+  border:none;
+  cursor:pointer;
+  transition:transform .18s ease,background .2s,box-shadow .2s;
+  flex-shrink:0;
+  letter-spacing:-.005em;
+}
+.btn:hover{
+  background:#000;
+  transform:translateY(-2px);
+  color:#fff;
+  box-shadow:0 8px 24px rgba(10,10,10,.18);
+}
+.btn .arrow{transition:transform .2s;font-size:15px;line-height:1}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px;
+  padding:8px 14px 2px;
+}
+.legal{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.legal .lbl{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--g2);
+  margin-right:4px;
+}
+.legal a{
+  color:var(--g1);
+  font-size:13px;
+  font-weight:500;
+}
+.legal a:hover{color:var(--accent)}
+.legal .sep{color:var(--g3);opacity:.6;font-size:11px}
+.meta{
+  font-size:12px;
+  color:var(--g2);
+  font-weight:400;
+}
+.meta strong{color:var(--g1);font-weight:600}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width:767px){
+  .shell{padding:14px;gap:14px}
+  header{padding:6px 10px}
+  .hero{
+    background-image:url('assets/images/hero-mobile.jpg');
+    min-height:62vh;
+    padding:32px 26px;
+    border-radius:22px;
+  }
+  .msg{padding:32px 26px;border-radius:20px}
+  .msg-row{align-items:stretch}
+  .btn{align-self:flex-start}
+  footer{flex-direction:column;align-items:flex-start;gap:12px}
+}
+
+@media (max-width:480px){
+  .h-meta{display:none}
+  .hero h1{font-size:clamp(2rem,11vw,3.2rem)}
+}
+
+/* ── ACCESSIBILITY ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce){
+  .edot{animation:none}
+  *{transition:none!important}
+}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header>
+    <a class="brand" href="/" aria-label="Maxola Labs">
+      <span class="mk">ML</span>
+      <span class="bn">Maxola Labs</span>
+    </a>
+    <span class="h-meta">Tampa, FL</span>
+  </header>
+
+  <section class="hero" aria-label="Maxola Labs">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="edot" aria-hidden="true"></span>
+        Independent iOS Studio
+      </div>
+      <h1>Building something<br/>better.</h1>
+    </div>
+  </section>
+
+  <section class="msg">
+    <div class="msg-row">
+      <div class="msg-text">
+        <h2>Site under construction</h2>
+        <p>The studio site is being rebuilt. <strong>Our apps continue to ship and are fully supported</strong> — reach out any time.</p>
+      </div>
+      <a href="mailto:contact@maxolalabs.com" class="btn">
+        contact@maxolalabs.com
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="legal">
+      <span class="lbl">Privacy</span>
+      <a href="https://maxolalabs.com/pry/privacy.html">Pry</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="https://maxolalabs.com/shorecast/privacy.html">ShoreCast</a>
+    </div>
+    <div class="meta">
+      &copy; 2026 <strong>Maxola Labs LLC</strong>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
